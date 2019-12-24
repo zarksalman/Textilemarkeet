@@ -1,7 +1,7 @@
 package com.textile.markeet.data.retrofit
 
 import android.util.Log
-import com.textile.markeet.helpers.AppConstants.BASE_URL
+import com.textile.markeet.helpers.AppConstants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -32,7 +32,7 @@ class RetrofitRxJavaClient private constructor() {
     init {
 
         retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(AppConstants.BASE_URL)
             .client(okHttpClient())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())

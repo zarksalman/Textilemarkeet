@@ -21,7 +21,7 @@ public class AppPreference {
     }
 
     public String getString(String key) {
-        return mPref.getString(key, "");
+        return mPref.getString(key, null);
     }
 
     public void setString(String key, String value) {

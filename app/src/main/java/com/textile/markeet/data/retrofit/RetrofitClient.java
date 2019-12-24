@@ -30,7 +30,7 @@ public class RetrofitClient {
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .client(okHttpClient())
+                .client(getOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
@@ -49,6 +49,8 @@ public class RetrofitClient {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .addInterceptor(httpLoggingInterceptor()) // used if network off OR on
+                .addNetworkInterceptor(networkInterceptor()) // only used when network is on
+                .addInterceptor(offlineInterceptor()) // used if network off OR on
                 .build();
     }
 
