@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".views.activities.ParentCategoriesListActivity">
 
-    <include
+    <include layout="@layout/m_tool_bar_with_searchbar" />
 
-        android:id="@+id/toolbar"
-        layout="@layout/m_tool_bar_with_searchbar" />
+    <TextView
+
+        android:id="@+id/tv_category_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/categories"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/m_tool_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
 
@@ -19,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_category_title"
         tools:listitem="@layout/item_parent_category_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

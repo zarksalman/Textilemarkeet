@@ -66,6 +66,7 @@ class SigninActivity : BaseActivity() {
 
     private fun signinForm() {
 
+        showProgressBar()
         parameters.clear()
         parameters["username"] = userName
         parameters["password"] = userPass
@@ -78,6 +79,8 @@ class SigninActivity : BaseActivity() {
                 Toast.makeText(this@SigninActivity, it.getMessage(), Toast.LENGTH_SHORT).show()
                 Log.d(TAG, it.getMessage())
             }
+
+            hideProgressBar()
         })
     }
 }

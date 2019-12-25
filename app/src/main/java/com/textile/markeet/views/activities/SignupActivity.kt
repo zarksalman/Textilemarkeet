@@ -93,6 +93,7 @@ class SignupActivity : BaseActivity() {
 
     private fun signupForm() {
 
+        showProgressBar()
         parameters.clear()
         parameters["username"] = userName
 //        parameters["phone"] = phone
@@ -110,6 +111,8 @@ class SignupActivity : BaseActivity() {
                     Log.d(TAG, it.getMessage())
                 }
             }
+
+            hideProgressBar()
         })
     }
 }

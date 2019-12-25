@@ -47,7 +47,7 @@ class ParentCategoriesListActivity : BaseActivity() {
 
     private fun initUi() {
         sv_ads.queryHint = "Search Everything"
-
+        showProgressBar()
     }
 
     private fun initListeners() {
@@ -78,6 +78,7 @@ class ParentCategoriesListActivity : BaseActivity() {
                     }
                     Log.d(TAG, categoryDataContainer.message)
                 }
+                hideProgressBar()
             })
     }
 
