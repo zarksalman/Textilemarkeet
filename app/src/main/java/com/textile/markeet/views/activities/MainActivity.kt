@@ -20,13 +20,18 @@ class MainActivity : BaseActivity() {
                     startActivity(Intent(this, SigninActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.navigation_dashboard -> {
-                    textMessage.setText(R.string.title_dashboard)
+                R.id.navigation_account -> {
+                    textMessage.setText(R.string.account)
                     startActivity(Intent(this, SignupActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.navigation_notifications -> {
-                    textMessage.setText(R.string.title_notifications)
+                R.id.navigation_about_us -> {
+                    textMessage.setText(R.string.about_us)
+                    startActivity(Intent(this, ParentCategoriesListActivity::class.java))
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_contact_us -> {
+                    textMessage.setText(R.string.contact_us)
                     startActivity(Intent(this, ParentCategoriesListActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }

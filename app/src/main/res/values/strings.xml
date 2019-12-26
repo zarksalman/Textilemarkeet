@@ -10,4 +10,7 @@
     <string name="forget_password">Forget password ?</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="categories">Categories</string>
+    <string name="account">Account</string>
+    <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
 </resources>

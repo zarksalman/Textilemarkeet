@@ -46,15 +46,20 @@ class ParentCategoriesListActivity : BaseActivity() {
     }
 
     private fun initUi() {
+
         sv_ads.queryHint = "Search Everything"
+        sv_ads.isIconified = false
+        sv_ads.clearFocus()
+
         showProgressBar()
     }
 
     private fun initListeners() {
 
         iv_sv_clickable.setOnClickListener {
-
         }
+
+        btn_back.setOnClickListener { finish() }
     }
 
     private fun initAdapter() {

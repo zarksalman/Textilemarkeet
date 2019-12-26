@@ -1,9 +1,11 @@
 package com.textile.markeet.views.activities
 
 import android.app.ProgressDialog
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.textile.markeet.helpers.AppPreference
+import com.textile.markeet.helpers.AppUtils
 
 
 open class BaseActivity : AppCompatActivity() {
@@ -21,6 +23,7 @@ open class BaseActivity : AppCompatActivity() {
 
     fun setLayout(layout: Int) {
         setContentView(layout)
+
     }
 
     fun saveString(key: String, value: String) {
